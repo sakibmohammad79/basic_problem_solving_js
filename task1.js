@@ -6,17 +6,17 @@
 const person = [
   { name: "sakib", age: 22, gender: "male" },
   { name: "sami", age: 18, gender: "male" },
-  { name: "tahsin", age: 12, gender: "female" },
-  { name: "tanha", age: 10, gender: "female" },
-  { name: "taskiya", age: 8, gender: "female" },
-  { name: "tamim", age: 15, gender: "male" },
+  { name: "sabiha", age: 9, gender: "female" },
+  { name: "tamim", age: 16, gender: "male" },
+  { name: "taskiya", age: 7, gender: "female" },
+  { name: "tanha", age: 9, gender: "famale" },
 ];
 
 const findFemale = (person) => {
-  const male = person.filter((male) => male.gender === "male");
-  const remainingPerson = male.map((person) => person.name);
-  return remainingPerson;
+  const male = person.filter((person) => person.gender != "female");
+  const allMaleName = male.map((male) => male.name);
+  return allMaleName;
 };
 
 const male = findFemale(person);
-//console.log(male);
+console.log(male);
